@@ -56,7 +56,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 				ex.getRequestURL());
 		
 		Problem problem = createProblemBuilder(status, problemType, detail)
-				.userMessage(detail)
+				.userMessage(MSG_ERRO_GENERICA_USUARIO_FINAL)
 				.build();
 		
 		return handleExceptionInternal(ex, problem, headers, status, request);
@@ -85,7 +85,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 				ex.getName(), ex.getValue(), ex.getRequiredType().getSimpleName());
 
 		Problem problem = createProblemBuilder(status, problemType, detail)
-				.userMessage(detail)
+				.userMessage(MSG_ERRO_GENERICA_USUARIO_FINAL)
 				.build();
 
 		return handleExceptionInternal(ex, problem, headers, status, request);
@@ -106,7 +106,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		String detail = "O corpo da requisição está inválido. Verifique erro de sintaxe.";
 		
 		Problem problem = createProblemBuilder(status, problemType, detail)
-				.userMessage(detail)
+				.userMessage(MSG_ERRO_GENERICA_USUARIO_FINAL)
 				.build();
 		
 		return handleExceptionInternal(ex, problem, headers, status, request);
@@ -194,14 +194,14 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		if (body == null) {
 			body = Problem.builder()
-				.timestamp(LocalDateTime.now())	
+				.timestamp(LocalDateTime.now())
 				.title(status.getReasonPhrase())
 				.status(status.value())
 				.userMessage(MSG_ERRO_GENERICA_USUARIO_FINAL)
 				.build();
 		} else if (body instanceof String) {
 			body = Problem.builder()
-				.timestamp(LocalDateTime.now())	
+				.timestamp(LocalDateTime.now())
 				.title((String) body)
 				.status(status.value())
 				.userMessage(MSG_ERRO_GENERICA_USUARIO_FINAL)

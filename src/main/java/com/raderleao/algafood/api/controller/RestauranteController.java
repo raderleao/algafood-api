@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.flywaydb.core.internal.util.ExceptionUtils;
 import org.springframework.beans.BeanUtils;

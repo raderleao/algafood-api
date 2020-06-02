@@ -14,13 +14,13 @@ insert into estado (id, nome) values (1, 'Maranhão'), (2, 'Piauí'), (3, 'Tocan
 insert into cidade (id, nome, estado_id) values (1, 'São Luís', 1), (2, 'Imperatriz', 1), (3, 'Teresina', 2), (4, 'Belém', 4);
 
 ########## Restaurante ##########
-insert into restaurante (nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_cep, endereco_logradouro, endereco_numero, endereco_bairro, data_cadastro, data_atualizacao) values ('Thai Gourmet', 10, 1, 1, '38400-999', 'Rua João Pinheiro', '1000', 'Centro', utc_timestamp, utc_timestamp);
-insert into restaurante (nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_cep, endereco_logradouro, endereco_numero, endereco_bairro, data_cadastro, data_atualizacao) values ('Cabana do Sol', 11, 1, 1, '65036330', 'Rua General Luso Torres', '8', 'Vila Ivar Saldanha', utc_timestamp, utc_timestamp);
-insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao ) values ('Barriga Verde', 20.58,1, utc_timestamp, utc_timestamp);
-insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao ) values ('Cheiro Verde', 20.58,2, utc_timestamp, utc_timestamp);
-insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao ) values ('Mateus Delivery', 0,2, utc_timestamp, utc_timestamp);
-insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao ) values ('Choquito Delivery', 0,2, utc_timestamp, utc_timestamp);
-insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao ) values ('Vanda Restaurante', 0,2, utc_timestamp, utc_timestamp);
+insert into restaurante (nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_cep, endereco_logradouro, endereco_numero, endereco_bairro, data_cadastro, data_atualizacao, ativo) values ('Thai Gourmet', 10, 1, 1, '38400-999', 'Rua João Pinheiro', '1000', 'Centro', utc_timestamp, utc_timestamp, true);
+insert into restaurante (nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_cep, endereco_logradouro, endereco_numero, endereco_bairro, data_cadastro, data_atualizacao, ativo) values ('Cabana do Sol', 11, 1, 1, '65036330', 'Rua General Luso Torres', '8', 'Vila Ivar Saldanha', utc_timestamp, utc_timestamp, true);
+insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao, ativo ) values ('Barriga Verde', 20.58,1, utc_timestamp, utc_timestamp, true);
+insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao, ativo ) values ('Cheiro Verde', 20.58,2, utc_timestamp, utc_timestamp, true);
+insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao, ativo ) values ('Mateus Delivery', 0,2, utc_timestamp, utc_timestamp, true);
+insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao, ativo ) values ('Choquito Delivery', 0,2, utc_timestamp, utc_timestamp, true);
+insert into restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao, ativo ) values ('Vanda Restaurante', 0,2, utc_timestamp, utc_timestamp, true);
 
 ###########  Restaurante/Forma de Pagamento ##########
 insert into restaurante_forma_pagamento (restaurante_id, forma_pagamento_id) values (1, 1), (1, 2), (1, 3), (2, 3), (2, 4), (3, 1);

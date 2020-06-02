@@ -23,6 +23,6 @@ public class PedidoModel {
     private RestauranteResumoModel restaurante;
     private UsuarioModel cliente;
     private FormaPagamentoModel formaPagamento;
-    private EnderecoModel endereco;
+    private EnderecoModel enderecoEntrega;
     private List<ItemPedidoModel> itens;   
 }     
